@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Mother's Day Pinni ❤️</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+
+            background:
+            linear-gradient(rgba(0,0,0,0.45),
+            rgba(0,0,0,0.45)),
+
+            url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1600&auto=format&fit=crop');
+
+            background-size:cover;
+            background-position:center;
+            background-attachment:fixed;
+
+            color:white;
+            overflow-x:hidden;
+        }
+
+        .container{
+            width:100%;
+            min-height:100vh;
+        }
+
+        /* HERO SECTION */
+
+        .hero{
+
+            min-height:100vh;
+
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+
+            text-align:center;
+            padding:20px;
+        }
+
+        .heart{
+
+            font-size:65px;
+            margin-bottom:20px;
+
+            animation:float 2s infinite ease-in-out;
+        }
+
+        .hero h1{
+
+            font-size:78px;
+            font-weight:700;
+
+            text-shadow:0 5px 25px rgba(0,0,0,0.6);
+
+            animation:fadeIn 2s ease;
+        }
+
+        .hero h2{
+
+            margin-top:15px;
+
+            font-size:36px;
+            font-weight:400;
+
+            color:#ffffff;
+
+            text-shadow:0 2px 15px rgba(0,0,0,0.7);
+
+            animation:fadeIn 3s ease;
+        }
+
+        .btn{
+
+            margin-top:45px;
+
+            padding:17px 40px;
+
+            border:none;
+            border-radius:60px;
+
+            background:white;
+            color:#ff2e74;
+
+            font-size:20px;
+            font-weight:600;
+
+            cursor:pointer;
+
+            transition:0.4s;
+
+            box-shadow:0 10px 25px rgba(0,0,0,0.35);
+        }
+
+        .btn:hover{
+
+            transform:scale(1.08);
+
+            background:#ffe3ec;
+        }
+
+        /* GALLERY */
+
+        .gallery-section{
+
+            padding:80px 20px;
+
+            text-align:center;
+        }
+
+        .gallery-title{
+
+            font-size:52px;
+
+            margin-bottom:55px;
+
+            text-shadow:0 5px 20px rgba(0,0,0,0.5);
+        }
+
+        .gallery{
+
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+
+            gap:35px;
+        }
+
+        .card{
+
+            width:320px;
+
+            border-radius:30px;
+
+            overflow:hidden;
+
+            background:rgba(255,255,255,0.12);
+
+            backdrop-filter:blur(10px);
+
+            box-shadow:0 10px 35px rgba(0,0,0,0.4);
+
+            transition:0.5s;
+        }
+
+        .card:hover{
+
+            transform:translateY(-12px) scale(1.03);
+        }
+
+        .card img{
+
+            width:100%;
+            height:420px;
+
+            object-fit:cover;
+        }
+
+        /* MESSAGE SECTION */
+
+        .message-section{
+
+            padding:90px 20px;
+
+            display:flex;
+            justify-content:center;
+        }
+
+        .message-box{
+
+            width:90%;
+            max-width:950px;
+
+            background:rgba(255,255,255,0.12);
+
+            backdrop-filter:blur(15px);
+
+            border-radius:35px;
+
+            padding:55px;
+
+            box-shadow:0 10px 40px rgba(0,0,0,0.35);
+
+            text-align:center;
+        }
+
+        .message-box h3{
+
+            font-size:46px;
+
+            margin-bottom:30px;
+
+            text-shadow:0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .message-box p{
+
+            font-size:25px;
+
+            line-height:1.9;
+
+            color:#ffffff;
+
+            font-weight:500;
+
+            text-shadow:0 2px 12px rgba(0,0,0,0.75);
+        }
+
+        .signature{
+
+            margin-top:35px;
+
+            font-size:32px;
+
+            font-weight:600;
+
+            color:#ffe3ec;
+
+            text-shadow:0 3px 12px rgba(0,0,0,0.6);
+        }
+
+        footer{
+
+            text-align:center;
+
+            padding:25px;
+
+            font-size:18px;
+
+            color:white;
+
+            background:rgba(0,0,0,0.45);
+
+            text-shadow:0 2px 10px rgba(0,0,0,0.7);
+        }
+
+        /* SURPRISE SCREEN */
+
+        #surpriseScreen{
+
+            position:fixed;
+
+            top:0;
+            left:0;
+
+            width:100%;
+            height:100%;
+
+            background:
+            linear-gradient(135deg,#ff5f8f,#ff85a2);
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            z-index:9999;
+
+            animation:fadeIn 1s ease;
+        }
+
+        .surpriseContent{
+
+            text-align:center;
+
+            padding:40px;
+
+            color:white;
+
+            animation:zoomIn 1s ease;
+        }
+
+        .surpriseContent h1{
+
+            font-size:65px;
+
+            margin-bottom:25px;
+
+            text-shadow:0 4px 15px rgba(0,0,0,0.4);
+        }
+
+        .surpriseContent p{
+
+            font-size:30px;
+
+            line-height:1.8;
+
+            text-shadow:0 3px 12px rgba(0,0,0,0.4);
+        }
+
+        .surpriseContent h2{
+
+            margin-top:35px;
+
+            font-size:38px;
+        }
+
+        /* ANIMATIONS */
+
+        @keyframes float{
+
+            0%{
+                transform:translateY(0);
+            }
+
+            50%{
+                transform:translateY(-12px);
+            }
+
+            100%{
+                transform:translateY(0);
+            }
+        }
+
+        @keyframes fadeIn{
+
+            from{
+                opacity:0;
+                transform:translateY(30px);
+            }
+
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+
+        @keyframes zoomIn{
+
+            from{
+                opacity:0;
+                transform:scale(0.5);
+            }
+
+            to{
+                opacity:1;
+                transform:scale(1);
+            }
+        }
+
+        /* MOBILE RESPONSIVE */
+
+        @media(max-width:768px){
+
+            .hero h1{
+                font-size:50px;
+            }
+
+            .hero h2{
+                font-size:24px;
+            }
+
+            .gallery-title{
+                font-size:38px;
+            }
+
+            .card{
+                width:92%;
+            }
+
+            .card img{
+                height:350px;
+            }
+
+            .message-box{
+                padding:30px;
+            }
+
+            .message-box h3{
+                font-size:35px;
+            }
+
+            .message-box p{
+                font-size:20px;
+            }
+
+            .surpriseContent h1{
+                font-size:42px;
+            }
+
+            .surpriseContent p{
+                font-size:22px;
+            }
+
+            .surpriseContent h2{
+                font-size:28px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HERO SECTION -->
+
+        <section class="hero">
+
+            <div class="heart">💖</div>
+
+            <h1>Happy Mother's Day</h1>
+
+            <h2>To My Wonderful Pinni </h2>
+
+            <button class="btn"
+            onclick="showMessage()">
+
+                Tap for Surprise 🎁
+
+            </button>
+
+        </section>
+
+        <!-- GALLERY -->
+
+        <section class="gallery-section">
+
+            <h2 class="gallery-title">
+
+                Beautiful Memories 📸
+
+            </h2>
+
+            <div class="gallery">
+
+                <div class="card">
+
+                    <img src="photo1.jpg" alt="Photo 1">
+
+                </div>
+
+                <div class="card">
+
+                    <img src="photo2.jpg" alt="Photo 2">
+
+                </div>
+
+                <div class="card">
+
+                    <img src="photo3.jpg" alt="Photo 3">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- MESSAGE SECTION -->
+
+        <section class="message-section">
+
+            <div class="message-box">
+
+                <h3>A Message From My Heart 💌 for my lovely 💖pinni💖</h3>
+
+                <p>
+
+                    Dear Pinni,<br><br>
+
+                    Thank you for always filling my life
+                    with love, happiness, support and
+                    unforgettable memories.<br><br>
+
+                    Your kindness, smile and care make
+                    every moment brighter.<br><br>
+
+                    You may think I am not caring about you,
+                    but my love for you is truly priceless 💝<br><br>
+
+                    I feel lucky and blessed
+                    to have you in my life ❤️
+
+                </p>
+
+                <div class="signature">
+
+                    — With Love, Chintu
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+
+            Made with ❤️ specially for the world's best Pinni, Nagarani 💝
+
+        </footer>
+
+    </div>
+
+    <script>
+
+        function showMessage(){
+
+            const surprise = document.createElement("div");
+
+            surprise.id = "surpriseScreen";
+
+            surprise.innerHTML = `
+
+                <div class="surpriseContent">
+
+                    <h1>💖 Surprise Pinni 💖</h1>
+
+                    <p>
+
+                        Happy Mother's Day 🌸<br><br>
+
+                        Thank you for your endless love,
+                        care and support ❤️<br><br>
+
+                        You are one of the most special
+                        people in my life 💌
+
+                    </p>
+
+                    <h2>
+
+                        — Love You So Much, Chintu ❤️
+
+                    </h2>
+
+                </div>
+
+            `;
+
+            document.body.appendChild(surprise);
+        }
+
+    </script>
+
+</body>
+
+</html>
